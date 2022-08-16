@@ -28,7 +28,7 @@ export default function ClosingPage(props) {
           && <h2>You are Lawful Evil</h2>}
           
       {(total >= threeScore && total < fourScore) 
-          && <h2>Some choices are hard to make. Better safe than sorry.</h2>}
+          && <h2>Some choices are hard to make. Fence sitter.</h2>}
 
       {total >= fourScore 
           && <h2>Please attend my wedding.</h2>}

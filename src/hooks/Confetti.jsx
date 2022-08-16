@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Confetti from 'react-confetti';
 import {useWindowSize} from './useWindowSize';
 
-export default () => {
+export default function Sonfetti()  {
 
   const {width, height} = useWindowSize();
 

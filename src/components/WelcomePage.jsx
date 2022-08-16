@@ -28,7 +28,7 @@ const Result = styled.div`
   justify-content: center;
   align-items: center;
   color: pink ;
-  font-size: 5rem;
+  font-size: 200%;
   font-weight: bold;
   height: 50%;
   width: 80%;
