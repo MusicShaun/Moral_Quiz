@@ -1,6 +1,6 @@
 import Confetti from "../hooks/Confetti"
 import styled from 'styled-components';
-import {device} from './device';
+import {device} from '../helper/device';
 import quizArray from "./quizArray";
 
 
@@ -33,7 +33,7 @@ export default function ClosingPage(props) {
       {total >= fourScore 
           && <h2>Please attend my wedding.</h2>}
     </Result>
-    <RetryButton onClick={props.handleReset}>Retry</RetryButton>
+    <RetryButton onClick={props.handleReset}>Go again!</RetryButton>
   </LastScreenWrapper>
 </>)
 }
@@ -44,7 +44,7 @@ const LastScreenWrapper = styled.section`
   height: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 3rem;
 `;
@@ -54,9 +54,7 @@ const ScoreCard = styled.h1`
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0;
   font-size: 3rem;
-  height: 33%;
   width: 100%;
 
   @media ${device.mobile} {
@@ -66,12 +64,12 @@ const ScoreCard = styled.h1`
 `;
 
 const Result = styled.div`
+  margin: 2rem 0rem 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   color: pink ;
   font-size: 1.8rem;
-  height: 33%;
   width: 80%;
   text-align: center;
   @media ${device.mobile} {
@@ -88,8 +86,8 @@ const RetryButton = styled.button`
   width: 150px;
   height: 150px;
   font-size: 2rem;
-  border-radius: 50%;
-  border: 1px solid grey;
+  border-radius: 10px;
+  border: 1px solid black;
   cursor: pointer;
   background-color: rgb(255, 254, 242);
 

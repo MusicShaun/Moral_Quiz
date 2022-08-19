@@ -1,4 +1,4 @@
-import {device} from './device';
+import {device} from '../helper/device';
 import styled from 'styled-components';
 import quizArray from './quizArray';
 

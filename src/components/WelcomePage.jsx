@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {device} from './device';
+import {device} from '../helper/device';
 
 export default function ClosingPage(props) {
 
@@ -18,7 +18,7 @@ const LastScreenWrapper = styled.section`
   height: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 3rem;
 `;
@@ -30,9 +30,13 @@ const Result = styled.div`
   color: pink ;
   font-size: 200%;
   font-weight: bold;
-  height: 50%;
+  height: 30%;
   width: 80%;
+  max-width: 500px;
+  max-height: 200px;
   text-align: center;
+  white-space: nowrap;
+
   @media ${device.mobile} {
     font-size: 3.4rem;
   }
@@ -43,8 +47,10 @@ const Result = styled.div`
 `;
 const RetryButton = styled.button`
   padding: 1rem;
-  width: 80%;
-  height: 50%;
+  width: 50%;
+  height: 30%;
+  max-width: 200px;
+  max-height: 200px;
   font-size: 3rem;
   border-radius: 10px;
   border: 1px solid grey;

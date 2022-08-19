@@ -5,7 +5,8 @@ import WelcomePage from './WelcomePage';
 import MainContent from './MainContent';
 import ClosingPage from './ClosingPage';
 import styled from 'styled-components';
-import {device} from './device';
+import {device} from '../helper/device';
+
 
 export default function NavButtons() {
 
@@ -36,7 +37,7 @@ export default function NavButtons() {
 
 
   return ( <>
- 
+
     <NavButtonWrapper>
       {!welcomePage && 
               <WelcomePage beginQuiz={beginQuiz} />}
@@ -56,15 +57,18 @@ export default function NavButtons() {
 const NavButtonWrapper = styled.div`
   width: 80%;
   height: 80%;
+  max-width: 1000px;
+  max-height: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 40px;
   background-color: white;
+  z-index: 3;
 
   @media ${device.mobile} {
     width: 90%;
-    height: 90%;
+    height: 92%;
   }
 `;
 
