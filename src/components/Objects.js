@@ -3,7 +3,7 @@ import { merge,bounce,swing } from 'react-animations';
 
 
 export default function Objects(props) {
-  const { sceneWidth, sceneHeight, sceneTop, sceneLeft, cubeWidth, cubeHeight, size, rotater} = props; 
+  const { dimensions, sceneTop, sceneLeft, sceneWidth, sceneHeight, rotater} = props; 
   return (<>
   <ViewPort>
     <Scene style={{
@@ -14,23 +14,23 @@ export default function Objects(props) {
       }}
       >
       <Wrapper>
-        <Front style={{ position: 'absolute', width: `${cubeWidth}px`, height: `${cubeHeight}px`,
-                        transform: `rotateY(${0 + rotater}deg) translateZ(${size}px)`}}> </Front>
-        <Back style={{ position: 'absolute', width: `${cubeWidth}px`, height: `${cubeHeight}px`,
-                       transform: `rotateY(${180 + rotater}deg) translateZ(${size}px)`}}>  </Back>
+        <Front style={{ position: 'absolute', width: `${dimensions}px`, height: `${dimensions}px`,
+                        transform: `rotateY(${0 + rotater}deg) translateZ(${dimensions /2}px)`}}> </Front>
+        <Back style={{ position: 'absolute', width: `${dimensions}px`, height: `${dimensions}px`,
+                       transform: `rotateY(${180 + rotater}deg) translateZ(${dimensions /2}px)`}}>  </Back>
 
-        <Top style={{ position: 'absolute', width: `${cubeWidth}px`, height: `${cubeHeight}px`,
-                       transform: `rotateX(90deg) rotateZ(-${rotater}deg) translateZ(${size}px)`}}>                      
+        <Top style={{ position: 'absolute', width: `${dimensions}px`, height: `${dimensions}px`,
+                       transform: `rotateX(90deg) rotateZ(-${rotater}deg)  translateZ(${dimensions /2}px)`}}>                      
         </Top>
                        
-        <Bottom style={{ position: 'absolute', width: `${cubeWidth}px`, height: `${cubeHeight}px`,
-                       transform: `rotateX(-90deg) rotateZ(${rotater}deg)  translateZ(${size}px)` }}>
+        <Bottom style={{ position: 'absolute', width: `${dimensions}px`, height: `${dimensions}px`,
+                       transform: `rotateX(-90deg) rotateZ(${rotater}deg)  translateZ(${dimensions /2}px)` }}>
         </Bottom>
 
-        <Left style={{ position: 'absolute', width: `${cubeWidth}px`, height: `${cubeHeight}px`,
-                       transform: `rotateY(${-90 + rotater}deg) translateZ(${size}px)`}}></Left>
-        <Right style={{ position: 'absolute', width: `${cubeWidth}px`, height: `${cubeHeight}px`,
-                       transform: `rotateY(${90 + rotater}deg) translateZ(${size}px)`}}> </Right>
+        <Left style={{ position: 'absolute', width: `${dimensions}px`, height: `${dimensions}px`,
+                       transform: `rotateY(${-90 + rotater}deg) translateZ(${dimensions /2}px)`}}></Left>
+        <Right style={{ position: 'absolute', width: `${dimensions}px`, height: `${dimensions}px`,
+                       transform: `rotateY(${90 + rotater}deg) translateZ(${dimensions /2}px)`}}> </Right>
 
       </Wrapper>
     </Scene>
@@ -62,16 +62,20 @@ const Wrapper = styled.div`
   transform-style: preserve-3d;
   transform: translateZ(-100px);
   transition: transform 1s;
-  animation: mover 30s linear alternate infinite;
+  animation: mover 30s linear infinite;
   @keyframes mover {
     0% {
-      transform: translateZ(-100px) rotateY(   30deg); 
-    } 33% {
-      transform: translateZ(-100px) rotateX( -90deg);
-    } 66% {
-      transform: translateZ(-100px) rotateY(-150deg)
+      transform: translateZ(100px) rotateX(90deg) rotateY(-30deg); 
+    } 20% {
+      transform: translateZ(-100px) rotateX( 10deg);
+    } 40% {
+      transform: translateZ(100px) rotateY(-250deg)
+    } 60% {
+      transform: translateZ(-100px) rotateX(340deg)
+    } 80% {
+      transform: translateZ(-100px) rotateY(60deg) rotateX(-190deg)
     } 100% {
-      transform: translateZ(-100px) rotateX(-190deg)
+      transform: translateZ(100px) rotateY(-30deg)  rotateX( 90deg);
     }
   }
 `;

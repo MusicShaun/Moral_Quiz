@@ -31,29 +31,29 @@ function App() {
 
       <NavButtons />
 
-    <Objects sceneWidth={500} sceneHeight={500} sceneTop={30} sceneLeft={10} 
-    cubeHeight={80} cubeWidth={80} size={40} rotater={25}
+    <Objects sceneWidth={500} sceneHeight={400} sceneTop={30} sceneLeft={70} 
+    dimensions={80} rotater={25}
     />
-    <Objects sceneWidth={700} sceneHeight={700} sceneTop={90} sceneLeft={90}  
-    cubeHeight={40} cubeWidth={40} size={20}  rotater={-125}
+    <Objects sceneWidth={150} sceneHeight={200} sceneTop={84} sceneLeft={50}  
+    dimensions={60} rotater={125}
     />
-    <Objects sceneWidth={400} sceneHeight={400} sceneTop={10} sceneLeft={70}  
-    cubeHeight={20} cubeWidth={20} size={10}   rotater={340}
+    <Objects sceneWidth={300} sceneHeight={400} sceneTop={30} sceneLeft={10}  
+    dimensions={20}  rotater={340}
+    /> 
+    <Objects sceneWidth={300} sceneHeight={400} sceneTop={90} sceneLeft={90}  
+    dimensions={30}   rotater={220}
     />
-    <Objects sceneWidth={800} sceneHeight={800} sceneTop={60} sceneLeft={30}  
-    cubeHeight={30} cubeWidth={30} size={15}   rotater={120}
+    <Objects2 sceneWidth={300} sceneHeight={500} sceneTop={10} sceneLeft={0}  
+    dimensions={80}  rotater={225}
     />
-    <Objects2 sceneWidth={300} sceneHeight={300} sceneTop={10} sceneLeft={0}  
-    cubeHeight={80} cubeWidth={80} size={40}  rotater={225}
+    <Objects2 sceneWidth={200} sceneHeight={300} sceneTop={50} sceneLeft={90}  
+    dimensions={20}  rotater={40}
     />
-    <Objects2 sceneWidth={400} sceneHeight={400} sceneTop={50} sceneLeft={30}  
-    cubeHeight={20} cubeWidth={20} size={10}  rotater={-40}
+     <Objects2 sceneWidth={400} sceneHeight={500} sceneTop={80} sceneLeft={0}  
+    dimensions={60}  rotater={150}
     />
-    <Objects2 sceneWidth={500} sceneHeight={500} sceneTop={80} sceneLeft={90}  
-    cubeHeight={60} cubeWidth={60} size={30}  rotater={150}
-    />
-    <Objects2 sceneWidth={800} sceneHeight={800} sceneTop={27} sceneLeft={50}  
-    cubeHeight={36} cubeWidth={36} size={18}  rotater={-150}
+    <Objects2 sceneWidth={600} sceneHeight={500} sceneTop={27} sceneLeft={50}  
+    dimensions={36}  rotater={350}
     />
       
     </AppContainer>
