@@ -5,6 +5,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Objects from './Objects';
 import Objects2 from './Objects2';
+import { useWindowHeight} from '@react-hook/window-size';
+
 
 const AppContainer = styled.div`
   position: absolute;
@@ -12,8 +14,8 @@ const AppContainer = styled.div`
   top: 0;
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 
   display: flex;
   justify-content: center;
@@ -25,9 +27,11 @@ const AppContainer = styled.div`
 
 
 function App() {
+
+  const onlyHeight = useWindowHeight(); 
   return (
 
-    <AppContainer className="App">
+    <AppContainer className="App" style={{height: `${onlyHeight}px`}}>
 
       <NavButtons />
 
