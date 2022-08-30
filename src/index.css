@@ -4,8 +4,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Roboto', 'Oxygen',
-    'Ubuntu', sans-serif;
+  font-family: 'poppins','nunito','montserrat';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
