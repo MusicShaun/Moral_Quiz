@@ -1,12 +1,33 @@
 import styled, { keyframes } from 'styled-components';
 import { merge, rubberBand,swing } from 'react-animations';
-
+import React, {useRef, useEffect, useLayoutEffect} from 'react'; 
+import { gsap } from 'gsap';
 
 export default function Objects2(props) {
   const { dimensions, sceneTop, sceneLeft, rotater, sceneHeight, sceneWidth} = props; 
+
+  const testRef = useRef(null); 
+
+  useEffect(() => {
+    console.log(testRef)
+    gsap.from(testRef.current,
+       { 
+        x: "random(800, -800, 5)",
+        y: "random(800, -800, 5)",
+        duration:20,
+        ease:"none",
+        repeat:-1,
+        yoyo: true
+      });
+  },[])
+
+
+
+
+
   return (<>
   <ViewPort>
-    <Scene style={{
+    <Scene ref={testRef} style={{
       width: `${sceneWidth}px`,
       height: `${sceneHeight}px`,
       top: `${sceneTop}%`,
@@ -64,7 +85,7 @@ const Wrapper = styled.div`
   transform: translateZ(-100px);
   transition: transform 1s;
 
-  animation: mover 36s linear infinite;
+  animation: mover 36s linear infinite alternate;
   @keyframes mover {
     0% {
       transform: translateZ(-100px) rotateX(-10deg) rotateY(150deg); 
