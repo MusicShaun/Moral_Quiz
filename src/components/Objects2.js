@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { merge, rubberBand,swing } from 'react-animations';
-import React, {useRef, useEffect, useLayoutEffect} from 'react'; 
+import React, {useRef, useEffect} from 'react'; 
 import { gsap } from 'gsap';
 
 export default function Objects2(props) {
